@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import NoteContent from "@/app/note/[id]/NoteContent";
 
-export default async function NotePage({ params }: { params: { id: string } }) {
+export default async function NotePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   return (
     <Suspense
