@@ -45,7 +45,6 @@ export default function NoteContent({ noteId }: { noteId: string }) {
         }
 
         const data = await res.json();
-        console.log(data.hasPassword, data.hasPassword);
         setEncrypted(data.content);
 
         if (!data.hasPassword) {
@@ -70,7 +69,7 @@ export default function NoteContent({ noteId }: { noteId: string }) {
   };
 
   return (
-    <main className="min-h-screen p-8 mt-30 bg-gradient-to-br from-slate-50 to-zinc-50">
+    <main className="min-h-screen p-8 mt-30 ">
       <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
         {error && <ErrorMessage>{error}</ErrorMessage>}
         {hasHashedPassword && (
@@ -78,7 +77,7 @@ export default function NoteContent({ noteId }: { noteId: string }) {
             <h2 className="text-lg font-bold mb-2 text-center text-red-500">
               Password required to view content
             </h2>
-            <div className="flex justify-center">
+            <div className="flex flex-col md:flex-row justify-center">
               <Input
                 type="password"
                 placeholder="Enter password"
@@ -93,6 +92,7 @@ export default function NoteContent({ noteId }: { noteId: string }) {
         )}
         <div className="prose max-w-none">
           <Textarea value={noteText} readOnly className="w-full h-56" />
+          
         </div>
       </div>
     </main>
