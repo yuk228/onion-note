@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Turnstile } from "next-turnstile";
 import { encryptAES, generateKey } from "@/lib/functions/aes";
 import { hash } from "@/lib/functions/hash";
 import { Textarea } from "@/components/ui/textarea";
@@ -14,14 +13,13 @@ export default function Home() {
   const [text, setText] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [url, setUrl] = useState<string | null>(null);
-  const [token, setToken] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isOption, setIsOption] = useState<boolean>(false);
   const [password, setPassword] = useState<string | null>(null);
   const [confirmPassword, setConfirmPassword] = useState<string | null>(null);
 
   const handleCreate = async () => {
-    if (!text || !token) return;
+    if (!text) return;
 
     try {
       setIsLoading(true);
@@ -42,7 +40,6 @@ export default function Home() {
         },
         body: JSON.stringify({
           content,
-          token,
           hasPassword: hashedPassword ? true : false,
         }),
       });
@@ -53,7 +50,6 @@ export default function Home() {
 
       const { id } = await res.json();
       setUrl(`${window.location.origin}/note/${id}#${key}`);
-      setToken(null);
       setError(null);
     } catch {
       setError("Failed to create note, Try again later.");
@@ -63,7 +59,7 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen mt-60 md:mt-20 flex flex-col items-center justify-center bg-gradient-to-br from-slate-50 to-zinc-50">
+    <main className="min-h-screen mt-60 md:mt-20 flex flex-col items-center justify-center">
       <div className="w-full max-w-4xl mx-auto px-4 py-16">
         <div className="text-center mb-10">
           <h1 className="text-6xl font-bold mb-4 bg-gradient-to-r from-slate-800 to-zinc-800 bg-clip-text text-transparent tracking-tight">
@@ -95,22 +91,13 @@ export default function Home() {
                 variant="default"
                 size="lg"
                 onClick={handleCreate}
-                disabled={isLoading || !text || !token || password !== confirmPassword}
+                disabled={isLoading || !text || !!url || password !== confirmPassword}
               >
                 Create
               </Button>
               <Button variant="outline" size="lg" onClick={() => setIsOption(!isOption)}>
                 {isOption ? "Close Option" : "Open Option"}
               </Button>
-            </div>
-            <div className="mt-4 sm:mt-0">
-              <Turnstile
-                siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY as string}
-                theme="light"
-                onVerify={(token) => {
-                  setToken(token);
-                }}
-              />
             </div>
           </div>
           {isOption && (

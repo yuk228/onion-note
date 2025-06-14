@@ -3,7 +3,7 @@ import React from "react";
 
 export default async function Header() {
   return (
-    <header className="fixed top-0 w-full z-50 backdrop-blur-sm bg-gradient-to-br">
+    <header className="fixed top-0 w-full z-50 backdrop-blur-sm">
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         <Link
           href="/"

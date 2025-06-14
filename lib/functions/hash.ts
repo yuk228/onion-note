@@ -5,4 +5,3 @@ export const hash = async (text: string) => {
       .join("");
   });
 };
-
