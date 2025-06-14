@@ -59,7 +59,7 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen mt-60 md:mt-20 flex flex-col items-center justify-center">
+    <main className="min-h-screen mt-20 flex flex-col items-center justify-center">
       <div className="w-full max-w-4xl mx-auto px-4 py-16">
         <div className="text-center mb-10">
           <h1 className="text-6xl font-bold mb-4 bg-gradient-to-r from-slate-800 to-zinc-800 bg-clip-text text-transparent tracking-tight">
@@ -85,7 +85,7 @@ export default function Home() {
               {text.length}/ 5000 length
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mt-8">
+          <div className="flex flex-row justify-between items-center gap-4 mt-8">
             <div className="flex gap-3">
               <Button
                 variant="default"

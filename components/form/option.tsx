@@ -10,8 +10,8 @@ interface OptionProps {
 
 const Option = ({ password, setPassword, confirmPassword, setConfirmPassword }: OptionProps) => {
   return (
-    <div className="mt-10 sm:mt-0 flex justify-between">
-      <div className="flex flex-row gap-8 w-full">
+    <div className="mt-10 sm:mt-0 flex flex-col md:flex justify-between">
+      <div className="flex flex-col md:flex-row gap-8 w-full">
         <div className="flex-1 space-y-2">
           <p className="text-lg font-semibold text-slate-800">Password</p>
           <p className="text-sm text-slate-500">Enter a custom password to protect your note</p>
