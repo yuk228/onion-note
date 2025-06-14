@@ -9,7 +9,6 @@ import { Button } from "@/components/ui/button";
 import UrlArea from "@/components/form/url-area";
 import Option from "@/components/form/option";
 import ErrorMessage from "@/components/form/error-message";
-import Image from "next/image";
 
 export default function Home() {
   const [text, setText] = useState("");
