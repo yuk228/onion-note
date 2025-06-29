@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import UrlArea from "@/components/form/url-area";
 import Option from "@/components/form/option";
 import ErrorMessage from "@/components/form/error-message";
+import { Turnstile } from "next-turnstile";
 
 export default function Home() {
   const [text, setText] = useState("");
@@ -17,9 +18,10 @@ export default function Home() {
   const [isOption, setIsOption] = useState<boolean>(false);
   const [password, setPassword] = useState<string | null>(null);
   const [confirmPassword, setConfirmPassword] = useState<string | null>(null);
+  const [token, setToken] = useState<string | null>(null);
 
   const handleCreate = async () => {
-    if (!text) return;
+    if (!text || !token) return;
 
     try {
       setIsLoading(true);
@@ -41,6 +43,7 @@ export default function Home() {
         body: JSON.stringify({
           content,
           hasPassword: hashedPassword ? true : false,
+          token,
         }),
       });
 
@@ -85,19 +88,28 @@ export default function Home() {
               {text.length}/ 5000 length
             </div>
           </div>
-          <div className="flex flex-row justify-between items-center gap-4 mt-8">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mt-8">
             <div className="flex gap-3">
               <Button
                 variant="default"
                 size="lg"
                 onClick={handleCreate}
-                disabled={isLoading || !text || !!url || password !== confirmPassword}
+                disabled={isLoading || !text || !!url || !token || password !== confirmPassword}
               >
                 Create
               </Button>
               <Button variant="outline" size="lg" onClick={() => setIsOption(!isOption)}>
                 {isOption ? "Close Option" : "Open Option"}
               </Button>
+            </div>
+            <div className="mt-4 sm:mt-0">
+              <Turnstile
+                siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY as string}
+                theme="light"
+                onVerify={(token) => {
+                  setToken(token);
+                }}
+              />
             </div>
           </div>
           {isOption && (

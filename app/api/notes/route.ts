@@ -1,10 +1,17 @@
 import { push } from "@/lib/supabase/push";
 import { NextResponse } from "next/server";
 import { Note } from "@/lib/types";
+import { verifyToken } from "@/lib/functions/verify-token";
 
 export async function POST(request: Request) {
   try {
-    const { content, hasPassword } = await request.json();
+    const { content, hasPassword, token } = await request.json();
+
+    if (!content || !token) {
+      return NextResponse.json({ error: "Invalid request" }, { status: 400 });
+    }
+
+    await verifyToken(token);
 
     const id = crypto.randomUUID();
 
