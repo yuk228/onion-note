@@ -92,7 +92,6 @@ export default function NoteContent({ noteId }: { noteId: string }) {
         )}
         <div className="prose max-w-none">
           <Textarea value={noteText} readOnly className="w-full h-56" />
-          
         </div>
       </div>
     </main>
