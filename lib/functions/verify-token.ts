@@ -18,7 +18,10 @@ export async function verifyToken(token: string) {
     if (!verificationResponse.ok || !data.success) {
       throw new Error("Failed to verify token");
     }
-  } catch {
+
+    return data;
+  } catch (error) {
     console.log("[-] Failed to verify token");
+    throw error;
   }
 }
