@@ -13,15 +13,15 @@ export async function verifyToken(token: string) {
         }),
       }
     );
-
     const data = await verificationResponse.json();
 
     if (!verificationResponse.ok || !data.success) {
       throw new Error("Failed to verify token");
     }
 
-    return await verificationResponse.json();
-  } catch {
-    throw new Error("Failed to verify token");
+    return data;
+  } catch (error) {
+    console.log("[-] Failed to verify token");
+    throw error;
   }
 }
