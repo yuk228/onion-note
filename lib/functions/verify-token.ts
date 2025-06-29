@@ -14,7 +14,9 @@ export async function verifyToken(token: string) {
       }
     );
 
-    if (!verificationResponse.ok) {
+    const data = await verificationResponse.json();
+
+    if (!verificationResponse.ok || !data.success) {
       throw new Error("Failed to verify token");
     }
 
