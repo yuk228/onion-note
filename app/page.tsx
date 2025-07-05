@@ -65,9 +65,7 @@ export default function Home() {
     <main className="min-h-screen mt-20 flex flex-col items-center justify-center">
       <div className="w-full max-w-4xl mx-auto px-4 py-16">
         <div className="text-center mb-10">
-          <h1 className="text-6xl font-bold mb-4">
-            Onion Note
-          </h1>
+          <h1 className="text-6xl font-bold mb-4">Onion Note</h1>
           <div className="text-lg text-muted-foreground">
             <p>Create a private note with end-to-end encryption</p>
             <p>Encrypted Content will be deleted after reading.</p>
