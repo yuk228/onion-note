@@ -13,8 +13,8 @@ const Option = ({ password, setPassword, confirmPassword, setConfirmPassword }: 
     <div className="mt-10 sm:mt-0 flex flex-col md:flex justify-between">
       <div className="flex flex-col md:flex-row gap-8 w-full">
         <div className="flex-1 space-y-2">
-          <p className="text-lg font-semibold text-slate-800">Password</p>
-          <p className="text-sm text-slate-500">Enter a custom password to protect your note</p>
+          <p className="text-lg font-semibold text-foreground">Password</p>
+          <p className="text-sm text-muted-foreground">Enter a custom password to protect your note</p>
           <Input
             type="password"
             placeholder="Enter your password"
@@ -23,8 +23,8 @@ const Option = ({ password, setPassword, confirmPassword, setConfirmPassword }: 
           />
         </div>
         <div className="flex-1 space-y-2">
-          <p className="text-lg font-semibold text-slate-800">Confirm Password</p>
-          <p className="text-sm text-slate-500">Enter the same password as above</p>
+          <p className="text-lg font-semibold text-foreground">Confirm Password</p>
+          <p className="text-sm text-muted-foreground">Enter the same password as above</p>
           <Input
             type="password"
             placeholder="Confirm your password"
