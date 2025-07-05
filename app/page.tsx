@@ -65,16 +65,16 @@ export default function Home() {
     <main className="min-h-screen mt-20 flex flex-col items-center justify-center">
       <div className="w-full max-w-4xl mx-auto px-4 py-16">
         <div className="text-center mb-10">
-          <h1 className="text-6xl font-bold mb-4 bg-gradient-to-r from-slate-800 to-zinc-800 bg-clip-text text-transparent tracking-tight">
+          <h1 className="text-6xl font-bold mb-4">
             Onion Note
           </h1>
-          <div className="text-lg text-slate-600">
+          <div className="text-lg text-muted-foreground">
             <p>Create a private note with end-to-end encryption</p>
             <p>Encrypted Content will be deleted after reading.</p>
           </div>
         </div>
         {error && <ErrorMessage>{error}</ErrorMessage>}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-8 border border-slate-100 transition-all duration-300 hover:shadow-xl">
+        <div className="bg-background rounded-2xl shadow-lg p-8 mb-8 border border-border transition-all duration-300 hover:shadow-xl">
           <div className="relative">
             <Textarea
               value={text}
@@ -84,7 +84,7 @@ export default function Home() {
               readOnly={isLoading || !!url}
               className="w-full h-56"
             />
-            <div className="absolute bottom-4 right-4 text-sm text-slate-400">
+            <div className="absolute bottom-4 right-4 text-sm text-muted-foreground">
               {text.length}/ 5000 length
             </div>
           </div>
@@ -105,7 +105,7 @@ export default function Home() {
             <div className="mt-4 sm:mt-0">
               <Turnstile
                 siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY as string}
-                theme="light"
+                theme="auto"
                 onVerify={(token) => {
                   setToken(token);
                 }}

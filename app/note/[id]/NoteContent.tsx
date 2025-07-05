@@ -70,7 +70,7 @@ export default function NoteContent({ noteId }: { noteId: string }) {
 
   return (
     <main className="min-h-screen p-8 mt-30 ">
-      <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
+      <div className="max-w-4xl mx-auto bg-background rounded-lg shadow-lg p-8 border border-border">
         {error && <ErrorMessage>{error}</ErrorMessage>}
         {hasHashedPassword && (
           <div className="mb-4 text-center">

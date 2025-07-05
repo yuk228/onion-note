@@ -5,7 +5,7 @@ import { ClipboardCopy } from "lucide-react";
 
 const UrlArea = ({ url }: { url: string }) => {
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-8 border border-slate-100">
+    <div className="bg-background rounded-2xl shadow-lg p-8 border border-border">
       <h2 className="text-xl font-semibold mb-4">Share your note</h2>
       <div className="flex gap-2">
         <Input type="text" value={url} placeholder="" readOnly />
@@ -20,7 +20,7 @@ const UrlArea = ({ url }: { url: string }) => {
           <ClipboardCopy />
         </Button>
       </div>
-      <p className="mt-2 text-sm text-slate-600">
+      <p className="mt-2 text-sm text-muted-foreground">
         This link and encrypted content will be deleted after reading.
       </p>
     </div>

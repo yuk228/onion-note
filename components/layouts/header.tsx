@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import { ModeToggle } from "@/components/ui/theme-toggle";
 
 export default async function Header() {
   return (
@@ -16,7 +17,9 @@ export default async function Header() {
           <li></li>
           <li></li>
         </ul>
-        <div className="flex items-center gap-4"></div>
+        <div className="flex items-center gap-4">
+          <ModeToggle />
+        </div>
       </div>
     </header>
   );
