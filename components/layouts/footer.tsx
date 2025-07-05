@@ -18,9 +18,18 @@ const Footer = () => {
           Privacy Policy
         </Link>
       </div>
-      <p className="text-center py-4 text-muted-foreground">
-        Copyright © 2025 Onion Note | All Rights Reserved
-      </p>
+      <div className="flex flex-col md:flex-row md:gap-4 text-center justify-center py-4 text-muted-foreground">
+        <p className="md:pr-1">Copyright © 2025 Onion Note</p>
+        <p>
+          Sorce code are available on{" "}
+          <Link
+            href="https://github.com/yuk228/onion-note"
+            className="hover:text-foreground hover:underline transition-colors"
+          >
+            GitHub
+          </Link>
+        </p>
+      </div>
     </footer>
   );
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import { Input } from "@/components/ui/input";
+import { CircleAlert } from "lucide-react";
 
 interface OptionProps {
   password: string | null;
@@ -14,7 +15,9 @@ const Option = ({ password, setPassword, confirmPassword, setConfirmPassword }: 
       <div className="flex flex-col md:flex-row gap-8 w-full">
         <div className="flex-1 space-y-2">
           <p className="text-lg font-semibold text-foreground">Password</p>
-          <p className="text-sm text-muted-foreground">Enter a custom password to protect your note</p>
+          <p className="text-sm text-muted-foreground">
+            Enter a custom password to protect your note
+          </p>
           <Input
             type="password"
             placeholder="Enter your password"
@@ -24,7 +27,7 @@ const Option = ({ password, setPassword, confirmPassword, setConfirmPassword }: 
         </div>
         <div className="flex-1 space-y-2">
           <p className="text-lg font-semibold text-foreground">Confirm Password</p>
-          <p className="text-sm text-muted-foreground">Enter the same password as above</p>
+          <p className="text-sm text-muted-foreground">Enter the same password</p>
           <Input
             type="password"
             placeholder="Confirm your password"
@@ -32,19 +35,8 @@ const Option = ({ password, setPassword, confirmPassword, setConfirmPassword }: 
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
           {password && confirmPassword && password !== confirmPassword && (
-            <p className="text-red-500 text-sm mt-1 flex items-center gap-1">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
-                  clipRule="evenodd"
-                />
-              </svg>
+            <p className="text-destructive text-sm mt-1 flex items-center gap-1">
+              <CircleAlert className="w-4 h-4" />
               Passwords do not match
             </p>
           )}

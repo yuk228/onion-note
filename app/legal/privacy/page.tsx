@@ -8,11 +8,11 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <main className="min-h-screen p-8 mt-20">
-      <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
+      <div className="max-w-4xl mx-auto bg-background rounded-lg shadow-lg p-8 border border-border">
         <h1 className="text-3xl font-bold mb-8">Privacy Policy</h1>
 
         <div className="prose max-w-none">
-          <p className="text-sm text-gray-600 mb-8">Last modified: 2025-06-14</p>
+          <p className="text-sm text-muted-foreground mb-8">Last modified: 2025-06-14</p>
 
           <p className="mb-6">
             At Onion Note, privacy is taken very seriously, since the main purpose of the site is to

@@ -77,7 +77,7 @@ export default function NoteContent({ noteId }: { noteId: string }) {
             <h2 className="text-lg font-bold mb-2 text-center text-red-500">
               Password required to view content
             </h2>
-            <div className="flex flex-col md:flex-row justify-center">
+            <div className="flex flex-col md:flex-row justify-center gap-4">
               <Input
                 type="password"
                 placeholder="Enter password"
@@ -91,7 +91,7 @@ export default function NoteContent({ noteId }: { noteId: string }) {
           </div>
         )}
         <div className="prose max-w-none">
-          <Textarea value={noteText} readOnly className="w-full h-56" />
+          <Textarea value={noteText} readOnly className="w-full h-96" />
         </div>
       </div>
     </main>
