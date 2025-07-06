@@ -20,13 +20,16 @@ export const metadata: Metadata = {
   description: "Create a private note with end-to-end encryption",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ lang: "en" | "ja" }>;
 }>) {
+  const { lang } = await params;
   return (
-    <html lang="en" className="light" suppressHydrationWarning>
+    <html lang={lang} className="light" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider
           attribute="class"
@@ -41,4 +44,8 @@ export default function RootLayout({
       </body>
     </html>
   );
+}
+
+export async function generateStaticParams() {
+  return [{ lang: "en" }, { lang: "ja" }];
 }

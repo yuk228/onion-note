@@ -8,8 +8,9 @@ import { Input } from "@/components/ui/input";
 import ErrorMessage from "@/components/form/error-message";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
+import { Dictionary } from "@/lib/types";
 
-export default function NoteContent({ noteId }: { noteId: string }) {
+export default function NoteContent({ noteId, dict }: { noteId: string; dict: Dictionary }) {
   const [noteText, setNoteText] = useState<string>("");
   const [encrypted, setEncrypted] = useState<string>("");
   const [password, setPassword] = useState<string>("");
@@ -71,21 +72,21 @@ export default function NoteContent({ noteId }: { noteId: string }) {
   return (
     <main className="min-h-screen p-8 mt-30 ">
       <div className="max-w-4xl mx-auto bg-background rounded-lg shadow-lg p-8 border border-border">
-        {error && <ErrorMessage>{error}</ErrorMessage>}
+        {error && <ErrorMessage>{dict.note.error.title}</ErrorMessage>}
         {hasHashedPassword && (
           <div className="mb-4 text-center">
             <h2 className="text-lg font-bold mb-2 text-center text-red-500">
-              Password required to view content
+              {dict.note.password.title}
             </h2>
             <div className="flex flex-col md:flex-row justify-center gap-4">
               <Input
                 type="password"
-                placeholder="Enter password"
+                placeholder={dict.note.password.placeholder}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
               <Button variant="default" size="lg" onClick={handleSubmit}>
-                Submit
+                {dict.note.password.button}
               </Button>
             </div>
           </div>

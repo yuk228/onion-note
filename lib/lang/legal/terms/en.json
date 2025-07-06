@@ -1,0 +1,66 @@
+{
+  "metadata": {
+    "title": "Terms of Service | Onion Note",
+    "description": "Terms of Service for Onion Note - Privacy-First Note Sharing Service"
+  },
+  "title": "Terms of Service",
+  "lastModified": "Last modified: 2025-06-14",
+  "sections": {
+    "serviceDescription": {
+      "title": "1. Service Description",
+      "content": "Onion Note is a free web-based service that allows users to create encrypted notes that they can share over the internet as unique one-time-use HTTPS URLs (hereafter referred to as links) which by default expire after its first access via any web browser."
+    },
+    "userResponsibilities": {
+      "title": "2. User Responsibilities",
+      "content": "Users are solely responsible for:",
+      "list": [
+        "Maintaining the confidentiality of their note links and passwords",
+        "Choosing appropriate communication channels for sharing note links",
+        "The content of their notes and ensuring it complies with applicable laws",
+        "Any consequences resulting from the loss or unauthorized access to their note links"
+      ]
+    },
+    "disclaimerOfWarranties": {
+      "title": "3. Disclaimer of Warranties",
+      "content": [
+        "Onion Note and its operators make no warranties, express or implied, and hereby disclaim and negate all other warranties, including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.",
+        "In no event shall Onion Note or its operators be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Onion Note's website or service, even if Onion Note or an authorized representative has been notified orally or in writing of the possibility of such damage."
+      ]
+    },
+    "limitationOfLiability": {
+      "title": "4. Limitation of Liability",
+      "content": "Onion Note shall not be liable for any direct, indirect, incidental, special, consequential, or exemplary damages, including but not limited to, damages for loss of profits, goodwill, use, data, or other intangible losses resulting from:",
+      "list": [
+        "The use or inability to use the service",
+        "Unauthorized access to or alteration of your notes",
+        "Any other matter relating to the service"
+      ]
+    },
+    "serviceModifications": {
+      "title": "5. Service Modifications",
+      "content": "Onion Note reserves the right to modify or discontinue, temporarily or permanently, the service with or without notice. We shall not be liable to you or any third party for any modification, suspension, or discontinuance of the service."
+    },
+    "prohibitedUses": {
+      "title": "6. Prohibited Uses",
+      "content": "Users are prohibited from using the service to:",
+      "list": [
+        "Transmit any material that is illegal, harmful, threatening, abusive, harassing, defamatory, or invasive of privacy",
+        "Impersonate any person or entity, or falsely state or otherwise misrepresent your affiliation with a person or entity",
+        "Interfere with or disrupt the service or servers or networks connected to the service",
+        "Attempt to gain unauthorized access to any portion of the service or any other systems or networks connected to the service"
+      ]
+    },
+    "useOfCookies": {
+      "title": "7. Use of Cookies",
+      "content": "Currently, Onion Note does not use any cookies. If we implement cookie usage in the future, we will update this policy and notify users of any changes."
+    },
+    "governingLaw": {
+      "title": "8. Governing Law",
+      "content": "These terms shall be governed by and construed in accordance with the laws of Japan, without regard to its conflict of law provisions. Any disputes arising under or in connection with these terms shall be subject to the exclusive jurisdiction of the courts of Japan."
+    },
+    "changesToTerms": {
+      "title": "9. Changes to Terms",
+      "content": "Onion Note reserves the right to modify these terms at any time. We will notify users of any material changes by posting the new terms on this page. Your continued use of the service after such modifications will constitute your acknowledgment of the modified terms."
+    }
+  }
+}

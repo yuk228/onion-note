@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "title": "Privacy Policy | Onion Note",
+    "description": "Privacy Policy for Onion Note - Privacy-First Note Sharing Service"
+  },
+  "title": "Privacy Policy",
+  "lastModified": "Last modified: 2025-06-14",
+  "sections": {
+    "introduction": {
+      "title": "Introduction",
+      "content": "At Onion Note, privacy is taken very seriously, since the main purpose of the site is to preserve it. This policy outlines the measures taken by Onion Note to protect the privacy of its users."
+    },
+    "serviceDescription": {
+      "title": "1. Service Description",
+      "content": [
+        "Onion Note is a free web-based service that allows users to create encrypted notes that they can share over the internet as unique one-time-use HTTPS URLs (hereafter referred to as links) which by default expire after its first access via any web browser.",
+        "As Onion Note does not provide any means for transmitting the link, the act of sending the link is the full responsibility of Onion Note users.",
+        "Depending on the communication channel of your choice (e.g., e-mail, fax, SMS, phone, instant messaging, social media), there may be a certain risk that third parties intercept your communication, get knowledge of the communicated link and thus may be able to read your note."
+      ]
+    },
+    "noteProcessing": {
+      "title": "2. How the Notes and Their Contents are Processed",
+      "content": [
+        "The link is generated in the user's browser and at no time is sent as such to Onion Note. The link is thus in the sender's (and later possibly in the recipient's) hands only. Therefore, there is no way to recover a note if an Onion Note user loses the link.",
+        "Since only the link binds the decryption key to the note's content and since Onion Note does not have the link, at no time is any note held in any readable format state at Onion Note. This assures that nobody (including Onion Note's administrators) can read a note.",
+        "When using Onion Note's default functionality, when a note is retrieved, its data is completely removed from Onion Note; there is absolutely no way to recover it again.",
+        "When a note is not retrieved after 30 days, Onion Note removes it permanently, just as if it were read."
+      ]
+    },
+    "ipAddressProcessing": {
+      "title": "3. Processing of IP Addresses",
+      "content": "Onion Note processes IP addresses only for rate limiting purposes and to enable communication with Onion Note's servers. IP addresses are not logged and are deleted as soon as they are no longer needed for the purpose of communication."
+    },
+    "pseudonymousData": {
+      "title": "4. Pseudonymous Data",
+      "content": [
+        "The creator of the note can introduce personal data into the note. Even though this data is encrypted, the data can be decrypted again and thus constitutes pseudonymous (personal) data. In any case, one cannot deduce the note's creator from Onion Note's database, as Onion Note does not store IP addresses.",
+        "The decryption of the note's data is in the users' hands (sender and recipient). Onion Note is not able to decrypt the note and access the data (personal or otherwise) introduced by the creator since Onion Note is never in possession of the decryption key which is contained only in the link."
+      ]
+    },
+    "disclaimer": {
+      "title": "5. Disclaimer",
+      "content": "When a person clicks the Onion Note's link, Onion Note declines any responsibility related to the note's content."
+    },
+    "dataDisclosure": {
+      "title": "6. Disclosure of Data to Third Party",
+      "content": "Onion Note does not share nor sell any information to others, nor use it in any way not mentioned in this Privacy Policy."
+    },
+    "cookies": {
+      "title": "7. Cookies",
+      "content": "Currently, Onion Note does not use any cookies or local storage for tracking, analytics, or personalization. If we decide to implement cookies in the future—for example, to remember language preferences or to improve service usability—we will update this Privacy Policy in advance and request explicit consent from users where required by applicable law."
+    },
+    "children": {
+      "title": "8. Children",
+      "content": "Onion Note does not target and is not intended to attract children under the age of 16. Minors must obtain express consent from their parents or legal guardians prior to accessing or using Onion Note."
+    },
+    "policyValidity": {
+      "title": "9. Validity of this Privacy Policy",
+      "content": "Please note that this Privacy Policy may change from time to time. We expect most changes to be minor. Regardless, we will post any Policy changes on this page, and if the changes are significant, we will provide a more prominent notice such as a message on the home page. Each version of this Policy will be identified at the top of the page by its effective date."
+    }
+  }
+}
