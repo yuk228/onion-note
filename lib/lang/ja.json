@@ -1,0 +1,39 @@
+{
+  "main": {
+    "description": "エンドツーエンド暗号化でプライベートなメモを作成",
+    "description2": "暗号化されたコンテンツは読み取り後に削除されます。",
+    "input": {
+      "placeholder": "ここにメモを書いてください...",
+      "length": "文字"
+    },
+    "option": {
+      "button": "作成",
+      "option": "オプションを開く",
+      "option2": "オプションを閉じる",
+      "password": "パスワード",
+      "password_description": "カスタムパスワードを入力してください",
+      "password_placeholder": "パスワードを入力してください",
+      "confirm_password": "パスワード確認",
+      "confirm_password_description": "同じパスワードを入力してください",
+      "confirm_password_placeholder": "パスワードを確認してください",
+      "error": "パスワードが一致しません"
+    },
+    "url": {
+      "title": "メモを共有",
+      "description": "このリンクと暗号化されたコンテンツは読み取り後に削除されます。"
+    },
+    "error": {
+      "title": "メモの作成に失敗しました。後でもう一度お試しください。"
+    }
+  },
+  "note": {
+    "password": {
+      "title": "ノートを表示するにはパスワードが必要です",
+      "placeholder": "パスワードを入力してください",
+      "button": "復号化"
+    },
+    "error": {
+      "title": "パスワードまたはキーが正しくありません"
+    }
+  }
+}

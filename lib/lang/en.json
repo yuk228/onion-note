@@ -1,0 +1,39 @@
+{
+  "main": {
+    "description": "Create a private note with end-to-end encryption",
+    "description2": "Encrypted Content will be deleted after reading.",
+    "input": {
+      "placeholder": "Write your note here...",
+      "length": "文字"
+    },
+    "option": {
+      "button": "Create",
+      "option": "Open Option",
+      "option2": "Close Option",
+      "password": "Password",
+      "password_description": "Enter a custom password to protect your note",
+      "password_placeholder": "Enter your password",
+      "confirm_password": "Confirm Password",
+      "confirm_password_description": "Enter the same password",
+      "confirm_password_placeholder": "Confirm your password",
+      "error": "Passwords do not match"
+    },
+    "url": {
+      "title": "Share your note",
+      "description": "This link and encrypted content will be deleted after reading."
+    },
+    "error": {
+      "title": "Failed to create note, Try again later."
+    }
+  },
+  "note": {
+    "password": {
+      "title": "Password required to view content",
+      "placeholder": "Enter your password",
+      "button": "Decrypt"
+    },
+    "error": {
+      "title": "Incorrect password or key"
+    }
+  }
+}
