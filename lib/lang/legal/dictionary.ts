@@ -1,5 +1,5 @@
-import { LegalDictionary } from "@/lib/types";
 import "server-only";
+import { LegalDictionary } from "@/lib/types";
 
 const legalDictionaries = {
   terms: {

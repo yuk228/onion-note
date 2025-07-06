@@ -59,3 +59,11 @@ export interface LegalDictionary {
     };
   };
 }
+
+export interface FooterDictionary {
+  legal: {
+    terms: string;
+    privacy: string;
+  };
+  sourceCode: string;
+}
